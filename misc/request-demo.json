@@ -1,0 +1,28 @@
+{
+  "timeFrame": {
+    "start": "2022-03-05",
+    "end": "2022-06-19"
+  },
+  "durationRange": {
+    "min": 3,
+    "max": 7
+  },
+  "friends": [
+    {
+      "name": "Julian",
+      "city": "HAMBURG"
+    },
+    {
+      "name": "Nick",
+      "city": "KRAKOW"
+    },
+    {
+      "name": "Lukas",
+      "city": "BRUSSELS"
+    }
+  ],
+  "destination": {
+    "country": "fr",
+    "city": "PARIS"
+  }
+}
