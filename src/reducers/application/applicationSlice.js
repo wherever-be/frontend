@@ -3,15 +3,16 @@ import { createSlice } from '@reduxjs/toolkit';
 const applicationSlice = createSlice({
   name: 'application',
   initialState: {
-    number: 0,
+    timeFrame: undefined,
   },
   reducers: {
-    incrementNumber(state) {
-      state.number++;
+    setTimeFrame(state, { payload: [start, end] }) {
+      if (!start || !end) delete state.timeFrame;
+      else state.timeFrame = { start, end };
     },
   },
 });
 
-export const { incrementNumber } = applicationSlice.actions;
+export const { setTimeFrame } = applicationSlice.actions;
 
 export default applicationSlice.reducer;

@@ -1,5 +1,10 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
+import { Button, DatePicker } from 'antd';
+import moment from 'moment';
+
+import { setTimeFrame } from './applicationSlice';
 
 const Claim = styled.p`
   text-align: center;
@@ -27,7 +32,6 @@ const Claim = styled.p`
 
   @media (max-width: 45rem) {
     font-size: 4rem;
-    margin-bottom: 1rem;
   }
 
   @media (max-width: 35rem) {
@@ -35,28 +39,31 @@ const Claim = styled.p`
   }
 `;
 
-const ClaimSub = styled.p`
+const Question = styled.p`
   text-align: center;
-  font-size: 1.8rem;
-  font-weight: 200;
-  margin: 0;
-  max-width: 40rem;
-  transition: font-size 0.2s;
-
-  @media (max-width: 65rem) {
-    font-size: 1.5rem;
-  }
-
-  @media (max-width: 45rem) {
-    font-size: 1.2rem;
-  }
+  font-size: 1.5rem;
 `;
 
 export default () => {
+  const appState = useSelector(state => state.application);
+  const dispatch = useDispatch();
+
+  const timeFrame = appState.timeFrame ? [moment(appState.timeFrame.start), moment(appState.timeFrame.end)] : null;
+
   return (
     <>
-      <Claim>Unlimited freedom</Claim>
-      <ClaimSub>Conveniently reconnect with your international friends and plan your journeys right now.</ClaimSub>
+      <Claim>Wherever be...?</Claim>
+
+      <Question>In which time frame do you want to meet?</Question>
+      <DatePicker.RangePicker
+        value={timeFrame}
+        onChange={(_, newRange) => {
+          dispatch(setTimeFrame(newRange));
+        }}
+      />
+      <Button type="primary" style={{ marginTop: '1.5rem' }} disabled={!timeFrame}>
+        Continue
+      </Button>
     </>
   );
 };
