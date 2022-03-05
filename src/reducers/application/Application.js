@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import Settings from '../settings/Settings';
 import Content from './Content';
+import BackgroundAttribution from './BackgroundAttribution';
 
 const ApplicationContainer = styled.div`
   position: absolute;
@@ -24,8 +25,9 @@ export default () => {
 
   return (
     <ApplicationContainer>
-      <Content />
+      <BackgroundAttribution />
       <Settings />
+      <Content />
     </ApplicationContainer>
   );
 };
