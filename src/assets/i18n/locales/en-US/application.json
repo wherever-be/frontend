@@ -3,6 +3,22 @@
   "steps": {
     "chooseTimeFrame": {
       "title": "In which time frame do you want to meet?"
+    },
+    "chooseDurationRange": {
+      "title": "How many days should each person's trip last?",
+      "numDays": "{{days}}\u00a0days"
+    },
+    "chooseOriginCities": {
+      "title": "For whom do you want to plan the journey?",
+      "friend": "{{name}} from {{city}}",
+      "addFriend": {
+        "title": "Add friend",
+        "labels": {
+          "name": "Name",
+          "city": "City"
+        },
+        "cityName": "{{city}}, {{country}}"
+      }
     }
   }
 }

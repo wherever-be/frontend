@@ -4,6 +4,8 @@ import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 
 import ChooseTimeFrame from './steps/ChooseTimeFrame';
+import ChooseDurationRange from './steps/ChooseDurationRange';
+import ChooseOriginCities from './steps/ChooseOriginCities';
 
 const Claim = styled.p`
   text-align: center;
@@ -47,6 +49,8 @@ export default () => {
       <Claim>{t('application:claim')}</Claim>
 
       {step === 'chooseTimeFrame' ? <ChooseTimeFrame /> : null}
+      {step === 'chooseDurationRange' ? <ChooseDurationRange /> : null}
+      {step === 'chooseOriginCities' ? <ChooseOriginCities /> : null}
     </>
   );
 };

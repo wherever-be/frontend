@@ -1,11 +1,12 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
-import { Button, DatePicker } from 'antd';
+import { DatePicker } from 'antd';
 import moment from 'moment';
 
 import { setTimeFrame } from '../applicationSlice';
 import Question from '../../../components/Question';
+import Navigation from './Navigation';
 
 export default () => {
   const { t } = useTranslation();
@@ -16,15 +17,15 @@ export default () => {
   return (
     <>
       <Question>{t('application:steps.chooseTimeFrame.title')}</Question>
+
       <DatePicker.RangePicker
         value={timeFrame}
         onChange={(_, newRange) => {
           dispatch(setTimeFrame(newRange));
         }}
       />
-      <Button type="primary" style={{ marginTop: '1.5rem' }} disabled={!timeFrame}>
-        {t('common:dialog.buttons.continue')}
-      </Button>
+
+      <Navigation />
     </>
   );
 };

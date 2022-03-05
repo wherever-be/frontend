@@ -16,10 +16,10 @@ const path = require('path');
   const cities = airports
     .sort((a, b) => a.city.code.localeCompare(b.city.code))
     .reduce((obj, airport) => {
-      obj[airport.city.code] = airport.city.name;
+      obj[airport.city.code] = { name: airport.city.name, country: airport.country.code };
       return obj;
     }, {});
 
-  await fs.writeJSON(path.join(__dirname, '../src/assets/i18n/locales/en-US/countries.json'), countries, { spaces: 2 });
-  await fs.writeJSON(path.join(__dirname, '../src/assets/i18n/locales/en-US/cities.json'), cities, { spaces: 2 });
+  await fs.writeJSON(path.join(__dirname, '../src/assets/i18n/locales/en-US/country.json'), countries, { spaces: 2 });
+  await fs.writeJSON(path.join(__dirname, '../src/assets/i18n/locales/en-US/city.json'), cities, { spaces: 2 });
 })();

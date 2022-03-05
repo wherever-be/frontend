@@ -1,10 +1,12 @@
 {
   "copiedToClipboard": "Copied to clipboard!",
+  "remove": "Remove",
   "dialog": {
     "buttons": {
       "ok": "OK",
       "cancel": "Cancel",
-      "continue": "Continue"
+      "continue": "Continue",
+      "back": "Back"
     }
   }
 }

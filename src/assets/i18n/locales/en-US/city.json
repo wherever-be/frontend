@@ -1,0 +1,890 @@
+{
+  "AALBORG": {
+    "name": "Aalborg",
+    "country": "dk"
+  },
+  "AARHUS": {
+    "name": "Aarhus",
+    "country": "dk"
+  },
+  "ABERDEEN": {
+    "name": "Aberdeen",
+    "country": "gb"
+  },
+  "AGADIR": {
+    "name": "Agadir",
+    "country": "ma"
+  },
+  "ALGHERO": {
+    "name": "Alghero",
+    "country": "it"
+  },
+  "ALICANTE": {
+    "name": "Alicante",
+    "country": "es"
+  },
+  "ALMERIA": {
+    "name": "Almeria",
+    "country": "es"
+  },
+  "AMMAN": {
+    "name": "Amman",
+    "country": "jo"
+  },
+  "AMSTERDAM": {
+    "name": "Amsterdam",
+    "country": "nl"
+  },
+  "ANCONA": {
+    "name": "Ancona",
+    "country": "it"
+  },
+  "AQABA": {
+    "name": "Aqaba",
+    "country": "jo"
+  },
+  "ATHENS": {
+    "name": "Athens",
+    "country": "gr"
+  },
+  "BANJA_LUKA": {
+    "name": "Banja Luka",
+    "country": "ba"
+  },
+  "BARCELONA": {
+    "name": "Barcelona",
+    "country": "es"
+  },
+  "BARI": {
+    "name": "Bari",
+    "country": "it"
+  },
+  "BASEL": {
+    "name": "Basel",
+    "country": "ch"
+  },
+  "BERGAMO": {
+    "name": "Bergamo",
+    "country": "it"
+  },
+  "BERGERAC": {
+    "name": "Bergerac",
+    "country": "fr"
+  },
+  "BERLIN": {
+    "name": "Berlin",
+    "country": "de"
+  },
+  "BEZIERS": {
+    "name": "Beziers",
+    "country": "fr"
+  },
+  "BIARRITZ": {
+    "name": "Biarritz",
+    "country": "fr"
+  },
+  "BILLUND": {
+    "name": "Billund",
+    "country": "dk"
+  },
+  "BIRMINGHAM": {
+    "name": "Birmingham",
+    "country": "gb"
+  },
+  "BODRUM": {
+    "name": "Bodrum",
+    "country": "tr"
+  },
+  "BOLOGNA": {
+    "name": "Bologna",
+    "country": "it"
+  },
+  "BORDEAUX": {
+    "name": "Bordeaux",
+    "country": "fr"
+  },
+  "BOURNEMOUTH": {
+    "name": "Bournemouth",
+    "country": "gb"
+  },
+  "BRATISLAVA": {
+    "name": "Bratislava",
+    "country": "sk"
+  },
+  "BREMEN": {
+    "name": "Bremen",
+    "country": "de"
+  },
+  "BREST": {
+    "name": "Brest",
+    "country": "fr"
+  },
+  "BRINDISI": {
+    "name": "Brindisi",
+    "country": "it"
+  },
+  "BRISTOL": {
+    "name": "Bristol",
+    "country": "gb"
+  },
+  "BRIVE": {
+    "name": "Brive",
+    "country": "fr"
+  },
+  "BRNO": {
+    "name": "Brno",
+    "country": "cz"
+  },
+  "BRUSSELS": {
+    "name": "Brussels",
+    "country": "be"
+  },
+  "BUCHAREST": {
+    "name": "Bucharest",
+    "country": "ro"
+  },
+  "BUDAPEST": {
+    "name": "Budapest",
+    "country": "hu"
+  },
+  "BURGAS": {
+    "name": "Burgas",
+    "country": "bg"
+  },
+  "BYDGOSZCZ": {
+    "name": "Bydgoszcz",
+    "country": "pl"
+  },
+  "CAGLIARI": {
+    "name": "Cagliari",
+    "country": "it"
+  },
+  "CARCASSONNE": {
+    "name": "Carcassonne",
+    "country": "fr"
+  },
+  "CARDIFF": {
+    "name": "Cardiff",
+    "country": "gb"
+  },
+  "CASTELLON": {
+    "name": "Castellon",
+    "country": "es"
+  },
+  "CATANIA": {
+    "name": "Catania",
+    "country": "it"
+  },
+  "CHANIA": {
+    "name": "Chania",
+    "country": "gr"
+  },
+  "CHARLEROI": {
+    "name": "Charleroi",
+    "country": "be"
+  },
+  "CLERMONT_FERRAND": {
+    "name": "Clermont Ferrand",
+    "country": "fr"
+  },
+  "CLUJ": {
+    "name": "Cluj",
+    "country": "ro"
+  },
+  "COLOGNE": {
+    "name": "Cologne",
+    "country": "de"
+  },
+  "COMISO": {
+    "name": "Comiso",
+    "country": "it"
+  },
+  "COPENHAGEN": {
+    "name": "Copenhagen",
+    "country": "dk"
+  },
+  "CORFU": {
+    "name": "Corfu",
+    "country": "gr"
+  },
+  "CORK": {
+    "name": "Cork",
+    "country": "ie"
+  },
+  "CROTONE": {
+    "name": "Crotone",
+    "country": "it"
+  },
+  "CUNEO": {
+    "name": "Cuneo",
+    "country": "it"
+  },
+  "DALAMAN": {
+    "name": "Dalaman",
+    "country": "tr"
+  },
+  "DERRY": {
+    "name": "Derry",
+    "country": "gb"
+  },
+  "DOLE": {
+    "name": "Dole",
+    "country": "fr"
+  },
+  "DORTMUND": {
+    "name": "Dortmund",
+    "country": "de"
+  },
+  "DRESDEN": {
+    "name": "Dresden",
+    "country": "de"
+  },
+  "DUBLIN": {
+    "name": "Dublin",
+    "country": "ie"
+  },
+  "DUBROVNIK": {
+    "name": "Dubrovnik",
+    "country": "hr"
+  },
+  "DUSSELDORF": {
+    "name": "Dusseldorf",
+    "country": "de"
+  },
+  "EAST_MIDLANDS": {
+    "name": "East Midlands",
+    "country": "gb"
+  },
+  "EDINBURGH": {
+    "name": "Edinburgh",
+    "country": "gb"
+  },
+  "EINDHOVEN": {
+    "name": "Eindhoven",
+    "country": "nl"
+  },
+  "ESSAOUIRA": {
+    "name": "Essaouira",
+    "country": "ma"
+  },
+  "EXETER": {
+    "name": "Exeter",
+    "country": "gb"
+  },
+  "FARO": {
+    "name": "Faro",
+    "country": "pt"
+  },
+  "FEZ": {
+    "name": "Fez",
+    "country": "ma"
+  },
+  "FIGARI": {
+    "name": "Figari",
+    "country": "fr"
+  },
+  "FRANKFURT": {
+    "name": "Frankfurt",
+    "country": "de"
+  },
+  "FUERTEVENTURA": {
+    "name": "Fuerteventura",
+    "country": "es"
+  },
+  "FUNCHAL": {
+    "name": "Funchal",
+    "country": "pt"
+  },
+  "GDANSK": {
+    "name": "Gdansk",
+    "country": "pl"
+  },
+  "GENOA": {
+    "name": "Genoa",
+    "country": "it"
+  },
+  "GIRONA": {
+    "name": "Girona",
+    "country": "es"
+  },
+  "GLASGOW": {
+    "name": "Glasgow",
+    "country": "gb"
+  },
+  "GOTHENBURG": {
+    "name": "Gothenburg",
+    "country": "se"
+  },
+  "GRAN_CANARIA": {
+    "name": "Gran Canaria",
+    "country": "es"
+  },
+  "GRENOBLE": {
+    "name": "Grenoble",
+    "country": "fr"
+  },
+  "HAMBURG": {
+    "name": "Hamburg",
+    "country": "de"
+  },
+  "HAUGESUND": {
+    "name": "Haugesund",
+    "country": "no"
+  },
+  "HELSINKI": {
+    "name": "Helsinki",
+    "country": "fi"
+  },
+  "HERAKLION": {
+    "name": "Heraklion",
+    "country": "gr"
+  },
+  "IBIZA": {
+    "name": "Ibiza",
+    "country": "es"
+  },
+  "JEREZ": {
+    "name": "Jerez",
+    "country": "es"
+  },
+  "KALAMATA": {
+    "name": "Kalamata",
+    "country": "gr"
+  },
+  "KARLSRUHE": {
+    "name": "Karlsruhe",
+    "country": "de"
+  },
+  "KATOWICE": {
+    "name": "Katowice",
+    "country": "pl"
+  },
+  "KAUNAS": {
+    "name": "Kaunas",
+    "country": "lt"
+  },
+  "KEFALONIA": {
+    "name": "Kefalonia",
+    "country": "gr"
+  },
+  "KERRY": {
+    "name": "Kerry",
+    "country": "ie"
+  },
+  "KIEV": {
+    "name": "Kyiv",
+    "country": "ua"
+  },
+  "KNOCK": {
+    "name": "Knock",
+    "country": "ie"
+  },
+  "KOS": {
+    "name": "Kos",
+    "country": "gr"
+  },
+  "KOSICE": {
+    "name": "Kosice",
+    "country": "sk"
+  },
+  "KRAKOW": {
+    "name": "Krakow",
+    "country": "pl"
+  },
+  "LA_PALMA": {
+    "name": "La Palma",
+    "country": "es"
+  },
+  "LA_ROCHELLE": {
+    "name": "La Rochelle",
+    "country": "fr"
+  },
+  "LAMEZIA": {
+    "name": "Lamezia",
+    "country": "it"
+  },
+  "LANZAROTE": {
+    "name": "Lanzarote",
+    "country": "es"
+  },
+  "LAPPEENRANTA": {
+    "name": "Lappeenranta",
+    "country": "fi"
+  },
+  "LARNACA": {
+    "name": "Larnaca",
+    "country": "cy"
+  },
+  "LEEDS": {
+    "name": "Leeds",
+    "country": "gb"
+  },
+  "LILLE": {
+    "name": "Lille",
+    "country": "fr"
+  },
+  "LIMOGES": {
+    "name": "Limoges",
+    "country": "fr"
+  },
+  "LISBON": {
+    "name": "Lisbon",
+    "country": "pt"
+  },
+  "LIVERPOOL": {
+    "name": "Liverpool",
+    "country": "gb"
+  },
+  "LODZ": {
+    "name": "Lodz",
+    "country": "pl"
+  },
+  "LONDON": {
+    "name": "London",
+    "country": "gb"
+  },
+  "LOURDES": {
+    "name": "Lourdes",
+    "country": "fr"
+  },
+  "LUBLIN": {
+    "name": "Lublin",
+    "country": "pl"
+  },
+  "LULEA": {
+    "name": "Luleå",
+    "country": "se"
+  },
+  "LUXEMBOURG": {
+    "name": "Luxembourg",
+    "country": "lu"
+  },
+  "LVIV": {
+    "name": "Lviv",
+    "country": "ua"
+  },
+  "MAASTRICHT": {
+    "name": "Maastricht",
+    "country": "nl"
+  },
+  "MADRID": {
+    "name": "Madrid",
+    "country": "es"
+  },
+  "MALAGA": {
+    "name": "Malaga",
+    "country": "es"
+  },
+  "MALMO": {
+    "name": "Malmo",
+    "country": "se"
+  },
+  "MALTA": {
+    "name": "Malta",
+    "country": "mt"
+  },
+  "MANCHESTER": {
+    "name": "Manchester",
+    "country": "gb"
+  },
+  "MARRAKESH": {
+    "name": "Marrakesh",
+    "country": "ma"
+  },
+  "MARSEILLE": {
+    "name": "Marseille",
+    "country": "fr"
+  },
+  "MEMMINGEN": {
+    "name": "Memmingen",
+    "country": "de"
+  },
+  "MENORCA": {
+    "name": "Menorca",
+    "country": "es"
+  },
+  "MILAN": {
+    "name": "Milan",
+    "country": "it"
+  },
+  "MUNSTER": {
+    "name": "Münster",
+    "country": "de"
+  },
+  "MURCIA": {
+    "name": "Murcia",
+    "country": "es"
+  },
+  "MYKONOS": {
+    "name": "Mykonos",
+    "country": "gr"
+  },
+  "NADOR": {
+    "name": "Nador",
+    "country": "ma"
+  },
+  "NANTES": {
+    "name": "Nantes",
+    "country": "fr"
+  },
+  "NAPLES": {
+    "name": "Naples",
+    "country": "it"
+  },
+  "NEWCASTLE": {
+    "name": "Newcastle",
+    "country": "gb"
+  },
+  "NEWQUAY": {
+    "name": "Newquay",
+    "country": "gb"
+  },
+  "NICE": {
+    "name": "Nice",
+    "country": "fr"
+  },
+  "NIMES": {
+    "name": "Nimes",
+    "country": "fr"
+  },
+  "NIS": {
+    "name": "Nis",
+    "country": "rs"
+  },
+  "NUREMBERG": {
+    "name": "Nuremberg",
+    "country": "de"
+  },
+  "ODESSA": {
+    "name": "Odessa",
+    "country": "ua"
+  },
+  "OLSZTYN": {
+    "name": "Olsztyn",
+    "country": "pl"
+  },
+  "ORADEA": {
+    "name": "Oradea",
+    "country": "ro"
+  },
+  "OREBRO": {
+    "name": "Örebro",
+    "country": "se"
+  },
+  "OSLO": {
+    "name": "Oslo",
+    "country": "no"
+  },
+  "OSTRAVA": {
+    "name": "Ostrava",
+    "country": "cz"
+  },
+  "OUARZAZATE": {
+    "name": "Ouarzazate",
+    "country": "ma"
+  },
+  "OUJDA": {
+    "name": "Oujda",
+    "country": "ma"
+  },
+  "PALANGA": {
+    "name": "Palanga",
+    "country": "lt"
+  },
+  "PALERMO": {
+    "name": "Palermo",
+    "country": "it"
+  },
+  "PALMA": {
+    "name": "Palma",
+    "country": "es"
+  },
+  "PAPHOS": {
+    "name": "Paphos",
+    "country": "cy"
+  },
+  "PARDUBICE": {
+    "name": "Pardubice",
+    "country": "cz"
+  },
+  "PARIS": {
+    "name": "Paris",
+    "country": "fr"
+  },
+  "PARMA": {
+    "name": "Parma",
+    "country": "it"
+  },
+  "PERPIGNAN": {
+    "name": "Perpignan",
+    "country": "fr"
+  },
+  "PERUGIA": {
+    "name": "Perugia",
+    "country": "it"
+  },
+  "PESCARA": {
+    "name": "Pescara",
+    "country": "it"
+  },
+  "PISA": {
+    "name": "Pisa",
+    "country": "it"
+  },
+  "PLOVDIV": {
+    "name": "Plovdiv",
+    "country": "bg"
+  },
+  "PODGORICA": {
+    "name": "Podgorica",
+    "country": "me"
+  },
+  "POITIERS": {
+    "name": "Poitiers",
+    "country": "fr"
+  },
+  "PONTA_DELGADA": {
+    "name": "Ponta Delgada",
+    "country": "pt"
+  },
+  "PORTO": {
+    "name": "Porto",
+    "country": "pt"
+  },
+  "POZNAN": {
+    "name": "Poznan",
+    "country": "pl"
+  },
+  "PRAGUE": {
+    "name": "Prague",
+    "country": "cz"
+  },
+  "PREVEZA": {
+    "name": "Preveza",
+    "country": "gr"
+  },
+  "PULA": {
+    "name": "Pula",
+    "country": "hr"
+  },
+  "RABAT": {
+    "name": "Rabat",
+    "country": "ma"
+  },
+  "REUS": {
+    "name": "Reus",
+    "country": "es"
+  },
+  "RHODES": {
+    "name": "Rhodes",
+    "country": "gr"
+  },
+  "RIGA": {
+    "name": "Riga",
+    "country": "lv"
+  },
+  "RIJEKA": {
+    "name": "Rijeka",
+    "country": "hr"
+  },
+  "RIMINI": {
+    "name": "Rimini",
+    "country": "it"
+  },
+  "RODEZ": {
+    "name": "Rodez",
+    "country": "fr"
+  },
+  "ROME": {
+    "name": "Rome",
+    "country": "it"
+  },
+  "RZESZOW": {
+    "name": "Rzeszow",
+    "country": "pl"
+  },
+  "SALZBURG": {
+    "name": "Salzburg",
+    "country": "at"
+  },
+  "SANDEFJORD": {
+    "name": "Sandefjord",
+    "country": "no"
+  },
+  "SANTANDER": {
+    "name": "Santander",
+    "country": "es"
+  },
+  "SANTIAGO": {
+    "name": "Santiago",
+    "country": "es"
+  },
+  "SANTORINI": {
+    "name": "Santorini",
+    "country": "gr"
+  },
+  "SEVILLE": {
+    "name": "Seville",
+    "country": "es"
+  },
+  "SHANNON": {
+    "name": "Shannon",
+    "country": "ie"
+  },
+  "SIBIU": {
+    "name": "Sibiu",
+    "country": "ro"
+  },
+  "SKELLEFTEA": {
+    "name": "Skelleftea",
+    "country": "se"
+  },
+  "SKIATHOS": {
+    "name": "Skiathos",
+    "country": "gr"
+  },
+  "SOFIA": {
+    "name": "Sofia",
+    "country": "bg"
+  },
+  "SPLIT": {
+    "name": "Split",
+    "country": "hr"
+  },
+  "STOCKHOLM": {
+    "name": "Stockholm",
+    "country": "se"
+  },
+  "SUCEAVA": {
+    "name": "Suceava",
+    "country": "ro"
+  },
+  "SZCZECIN": {
+    "name": "Szczecin",
+    "country": "pl"
+  },
+  "TALLINN": {
+    "name": "Tallinn",
+    "country": "ee"
+  },
+  "TAMPERE": {
+    "name": "Tampere",
+    "country": "fi"
+  },
+  "TANGIER": {
+    "name": "Tangier",
+    "country": "ma"
+  },
+  "TEL_AVIV": {
+    "name": "Tel Aviv",
+    "country": "il"
+  },
+  "TENERIFE": {
+    "name": "Tenerife",
+    "country": "es"
+  },
+  "TERCEIRA": {
+    "name": "Terceira",
+    "country": "pt"
+  },
+  "TETOUAN": {
+    "name": "Tétouan",
+    "country": "ma"
+  },
+  "THESSALONIKI": {
+    "name": "Thessaloniki",
+    "country": "gr"
+  },
+  "TIMISOARA": {
+    "name": "Timisoara",
+    "country": "ro"
+  },
+  "TOULOUSE": {
+    "name": "Toulouse",
+    "country": "fr"
+  },
+  "TOURS": {
+    "name": "Tours",
+    "country": "fr"
+  },
+  "TRAPANI": {
+    "name": "Trapani",
+    "country": "it"
+  },
+  "TRIESTE": {
+    "name": "Trieste",
+    "country": "it"
+  },
+  "TURIN": {
+    "name": "Turin",
+    "country": "it"
+  },
+  "VALENCIA": {
+    "name": "Valencia",
+    "country": "es"
+  },
+  "VALLADOLID": {
+    "name": "Valladolid",
+    "country": "es"
+  },
+  "VARNA": {
+    "name": "Varna",
+    "country": "bg"
+  },
+  "VAXJO": {
+    "name": "Växjö",
+    "country": "se"
+  },
+  "VENICE": {
+    "name": "Venice",
+    "country": "it"
+  },
+  "VERONA": {
+    "name": "Verona",
+    "country": "it"
+  },
+  "VIENNA": {
+    "name": "Vienna",
+    "country": "at"
+  },
+  "VIGO": {
+    "name": "Vigo",
+    "country": "es"
+  },
+  "VILNIUS": {
+    "name": "Vilnius",
+    "country": "lt"
+  },
+  "VISBY": {
+    "name": "Visby",
+    "country": "se"
+  },
+  "VITORIA-GASTEIZ": {
+    "name": "Vitoria-Gasteiz",
+    "country": "es"
+  },
+  "WARSAW": {
+    "name": "Warsaw",
+    "country": "pl"
+  },
+  "WROCLAW": {
+    "name": "Wroclaw",
+    "country": "pl"
+  },
+  "ZADAR": {
+    "name": "Zadar",
+    "country": "hr"
+  },
+  "ZAGREB": {
+    "name": "Zagreb",
+    "country": "hr"
+  },
+  "ZAKYNTHOS": {
+    "name": "Zakynthos",
+    "country": "gr"
+  },
+  "ZARAGOZA": {
+    "name": "Zaragoza",
+    "country": "es"
+  }
+}

@@ -25,7 +25,6 @@ export default () => {
         onOk={() => setModalOpen(false)}
         onCancel={() => setModalOpen(false)}
         cancelButtonProps={{ style: { display: 'none' } }}
-        okText={t('common:dialog.buttons.ok')}
       >
         N/A
       </Modal>
