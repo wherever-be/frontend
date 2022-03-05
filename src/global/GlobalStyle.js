@@ -7,7 +7,7 @@ export default createGlobalStyle`
     background-image: url(${background});
     background-size: cover;
     background-position: right top;
-    overflow: hidden;
+    background-attachment: fixed;
   }
 
   *, *:before, *:after {
