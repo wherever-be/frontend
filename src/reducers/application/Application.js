@@ -1,10 +1,9 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
-import { Button } from 'antd';
 
 import Settings from '../settings/Settings';
-import { incrementNumber } from './applicationSlice';
+import Content from './Content';
 
 const ApplicationContainer = styled.div`
   position: absolute;
@@ -12,6 +11,11 @@ const ApplicationContainer = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export default () => {
@@ -20,15 +24,7 @@ export default () => {
 
   return (
     <ApplicationContainer>
-      The number is {number}.<br />
-      <Button
-        type="primary"
-        onClick={() => {
-          dispatch(incrementNumber());
-        }}
-      >
-        Increment number
-      </Button>
+      <Content />
       <Settings />
     </ApplicationContainer>
   );
