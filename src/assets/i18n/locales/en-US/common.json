@@ -8,5 +8,8 @@
       "continue": "Continue",
       "back": "Back"
     }
+  },
+  "chooseCity": {
+    "cityName": "{{city}}, {{country}}"
   }
 }

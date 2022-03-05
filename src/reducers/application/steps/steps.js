@@ -2,14 +2,17 @@ export function getSteps(state) {
   return [
     {
       name: 'chooseTimeFrame',
-      nextStepAvailable: !!state.application.timeFrame,
+      nextStepDisabled: !state.application.timeFrame,
     },
     {
       name: 'chooseDurationRange',
     },
     {
       name: 'chooseOriginCities',
-      nextStepAvailable: state.application.friends.length > 0,
+      nextStepDisabled: state.application.friends.length === 0,
+    },
+    {
+      name: 'chooseDestination',
     },
   ];
 }

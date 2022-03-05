@@ -23,7 +23,11 @@ export default ({ children }) => {
         </Button>
       )}
       {currentStepIdx === stepList.length - 1 ? null : (
-        <Button type="primary" onClick={() => dispatch(setStep(stepList[currentStepIdx + 1].name))}>
+        <Button
+          type="primary"
+          onClick={() => dispatch(setStep(stepList[currentStepIdx + 1].name))}
+          disabled={stepList[currentStepIdx].nextStepDisabled}
+        >
           {t('common:dialog.buttons.continue')}
         </Button>
       )}

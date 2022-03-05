@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
-import { Button, Input, List, Modal, Select, Tooltip } from 'antd';
+import { Button, Input, List, Modal, Tooltip } from 'antd';
 import { DeleteOutlined } from '@ant-design/icons';
 
 import Question from '../../../components/Question';
+import ChooseCity from '../../../components/ChooseCity';
 import Navigation from './Navigation';
 import { addFriend, removeFriend } from '../applicationSlice';
 
 export default () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const tLocal = (k, ...params) => t('application:steps.chooseOriginCities.' + k, ...params);
   const dispatch = useDispatch();
   const friends = useSelector(state => state.application.friends);
@@ -23,8 +24,6 @@ export default () => {
     setNewFriendName('');
     setNewFriendCity('');
   };
-
-  const cities = i18n.getResourceBundle(i18n.language, 'city');
 
   return (
     <>
@@ -79,15 +78,7 @@ export default () => {
             <tr>
               <td style={{ paddingRight: '1rem' }}>{tLocal('addFriend.labels.city')}</td>
               <td>
-                <Select style={{ width: '100%' }} value={newFriendCity} onChange={e => setNewFriendCity(e)}>
-                  {Object.entries(cities)
-                    .sort((a, b) => a[1].name.localeCompare(b[1].name))
-                    .map(c => (
-                      <Select.Option key={c[0]}>
-                        {tLocal('addFriend.cityName', { city: c[1].name, country: t('country:' + c[1].country) })}
-                      </Select.Option>
-                    ))}
-                </Select>
+                <ChooseCity style={{ width: '100%' }} value={newFriendCity} onChange={e => setNewFriendCity(e)} />
               </td>
             </tr>
           </tbody>

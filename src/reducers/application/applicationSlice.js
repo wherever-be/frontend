@@ -7,6 +7,7 @@ const applicationSlice = createSlice({
     timeFrame: undefined,
     durationRange: { min: 3, max: 7 },
     friends: [],
+    destination: {},
   },
   reducers: {
     setStep(state, { payload: newStep }) {
@@ -25,9 +26,13 @@ const applicationSlice = createSlice({
     removeFriend(state, { payload: name }) {
       state.friends = state.friends.filter(f => f.name !== name);
     },
+    setDestination(state, { payload }) {
+      state.destination = payload;
+    },
   },
 });
 
-export const { setStep, setTimeFrame, setDurationRange, addFriend, removeFriend } = applicationSlice.actions;
+export const { setStep, setTimeFrame, setDurationRange, addFriend, removeFriend, setDestination } =
+  applicationSlice.actions;
 
 export default applicationSlice.reducer;

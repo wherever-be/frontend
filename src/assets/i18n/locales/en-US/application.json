@@ -16,8 +16,14 @@
         "labels": {
           "name": "Name",
           "city": "City"
-        },
-        "cityName": "{{city}}, {{country}}"
+        }
+      }
+    },
+    "chooseDestination": {
+      "title": "If you like, you can choose a destination country or city.",
+      "labels": {
+        "country": "Destination country",
+        "city": "Destination city"
       }
     }
   }
