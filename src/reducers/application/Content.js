@@ -1,10 +1,9 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
-import { Button, DatePicker } from 'antd';
-import moment from 'moment';
 
-import { setTimeFrame } from './applicationSlice';
+import ChooseTimeFrame from './steps/ChooseTimeFrame';
 
 const Claim = styled.p`
   text-align: center;
@@ -39,31 +38,15 @@ const Claim = styled.p`
   }
 `;
 
-const Question = styled.p`
-  text-align: center;
-  font-size: 1.5rem;
-`;
-
 export default () => {
-  const appState = useSelector(state => state.application);
-  const dispatch = useDispatch();
-
-  const timeFrame = appState.timeFrame ? [moment(appState.timeFrame.start), moment(appState.timeFrame.end)] : null;
+  const { t } = useTranslation();
+  const step = useSelector(state => state.application.step);
 
   return (
     <>
-      <Claim>Wherever be...?</Claim>
+      <Claim>{t('application:claim')}</Claim>
 
-      <Question>In which time frame do you want to meet?</Question>
-      <DatePicker.RangePicker
-        value={timeFrame}
-        onChange={(_, newRange) => {
-          dispatch(setTimeFrame(newRange));
-        }}
-      />
-      <Button type="primary" style={{ marginTop: '1.5rem' }} disabled={!timeFrame}>
-        Continue
-      </Button>
+      {step === 'chooseTimeFrame' ? <ChooseTimeFrame /> : null}
     </>
   );
 };

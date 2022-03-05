@@ -1,1 +1,8 @@
-{}
+{
+  "claim": "Wherever be...?",
+  "steps": {
+    "chooseTimeFrame": {
+      "title": "In which time frame do you want to meet?"
+    }
+  }
+}

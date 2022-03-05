@@ -3,7 +3,8 @@
   "dialog": {
     "buttons": {
       "ok": "OK",
-      "cancel": "Cancel"
+      "cancel": "Cancel",
+      "continue": "Continue"
     }
   }
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 
 import Settings from '../settings/Settings';
@@ -20,9 +19,6 @@ const ApplicationContainer = styled.div`
 `;
 
 export default () => {
-  const dispatch = useDispatch();
-  const number = useSelector(state => state.application.number);
-
   return (
     <ApplicationContainer>
       <BackgroundAttribution />
