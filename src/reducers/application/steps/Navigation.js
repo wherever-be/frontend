@@ -6,7 +6,7 @@ import { Button } from 'antd';
 import { getSteps } from './steps';
 import { setStep } from '../applicationSlice';
 
-export default ({ children }) => {
+export default ({ noContinue, children }) => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
   const currentStep = useSelector(state => state.application.step);
@@ -22,7 +22,7 @@ export default ({ children }) => {
           {t('common:dialog.buttons.back')}
         </Button>
       )}
-      {currentStepIdx === stepList.length - 1 || children ? null : (
+      {noContinue || currentStepIdx === stepList.length - 1 || children ? null : (
         <Button
           type="primary"
           onClick={() => dispatch(setStep(stepList[currentStepIdx + 1].name))}
