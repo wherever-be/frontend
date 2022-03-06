@@ -6,7 +6,7 @@ import { Button, Card, Divider, Steps, Tooltip } from 'antd';
 import Question from '../../../components/Question';
 import CardsContainer from '../../../components/CardsContainer';
 import Navigation from './Navigation';
-import { tCurrency, tDate } from '../../../utils/utils';
+import { tCurrency, tDate, tTime } from '../../../utils/utils';
 import { reset } from '../applicationSlice';
 
 function getJourneyStepProps(t, connection) {
@@ -18,8 +18,12 @@ function getJourneyStepProps(t, connection) {
       </>
     ),
     description: (
-      <>
-        {tDate(t, new Date(connection.departure.date)) + ', ' + tCurrency(t, connection.price)}
+      <div style={{ fontSize: '0.8rem', lineHeight: '120%', marginTop: '0.2rem' }}>
+        {tDate(t, new Date(connection.departure.date))}
+        <br />
+        {tTime(t, new Date(connection.departure.date))} – {tTime(t, new Date(connection.arrival.date))}
+        <br />
+        {tCurrency(t, connection.price)}
         <br />
         <Button
           type="primary"
@@ -27,11 +31,11 @@ function getJourneyStepProps(t, connection) {
           href={connection.bookingLink}
           target="_blank"
           rel="noreferrer"
-          style={{ marginTop: '0.3rem' }}
+          style={{ marginTop: '0.5rem' }}
         >
           {t('application:steps.resultsFinal.book')}
         </Button>
-      </>
+      </div>
     ),
   };
 }

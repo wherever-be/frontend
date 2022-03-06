@@ -10,3 +10,30 @@ export function tDate(t, date) {
     val: date,
   });
 }
+
+export function tTime(t, date) {
+  return t('format:datetime', {
+    val: date,
+    formatParams: {
+      val: {
+        hour: 'numeric',
+        minute: 'numeric',
+      },
+    },
+  });
+}
+
+export function tDateTime(t, date) {
+  return t('format:datetime', {
+    val: date,
+    formatParams: {
+      val: {
+        year: 'numeric',
+        month: 'numeric',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+      },
+    },
+  });
+}
