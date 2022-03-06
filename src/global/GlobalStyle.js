@@ -13,4 +13,9 @@ export default createGlobalStyle`
   *, *:before, *:after {
     font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   }
+
+  /* Fix alignment of antd icons (see https://github.com/ant-design/ant-design/issues/13074#issuecomment-671093258) */
+  svg {
+    vertical-align: baseline;
+  }
 `;
