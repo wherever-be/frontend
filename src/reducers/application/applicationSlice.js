@@ -43,6 +43,9 @@ const applicationSlice = createSlice({
     setDestination(state, { payload }) {
       state.destination = payload;
     },
+    setChosenDestination(state, { payload }) {
+      state.chosenDestination = payload;
+    },
   },
   extraReducers: builder => {
     builder.addCase(search.pending, state => {
@@ -60,7 +63,14 @@ const applicationSlice = createSlice({
   },
 });
 
-export const { setStep, setTimeFrame, setDurationRange, addFriend, removeFriend, setDestination } =
-  applicationSlice.actions;
+export const {
+  setStep,
+  setTimeFrame,
+  setDurationRange,
+  addFriend,
+  removeFriend,
+  setDestination,
+  setChosenDestination,
+} = applicationSlice.actions;
 
 export default applicationSlice.reducer;

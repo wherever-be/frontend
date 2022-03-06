@@ -1,19 +1,12 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
-import styled from 'styled-components';
 import { Card } from 'antd';
 
 import Question from '../../../components/Question';
+import CardsContainer from '../../../components/CardsContainer';
 import Navigation from './Navigation';
-
-const CardsContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-`;
+import { setChosenDestination, setStep } from '../applicationSlice';
 
 function sumAll(arr) {
   return arr.reduce((sum, x) => sum + x, 0);
@@ -50,13 +43,12 @@ export default () => {
   const resultsByCity = useResultsByCity();
 
   if (!resultsByCity) return null;
-  console.log(resultsByCity);
 
   return (
     <>
       <Question>{tLocal('title')}</Question>
 
-      <CardsContainer>
+      <CardsContainer style={{ flexWrap: 'wrap' }}>
         {resultsByCity.cities.map(c => {
           const cityName = c.name;
           let thumbnail = t('city:' + cityName + '.thumbnail');
@@ -69,7 +61,8 @@ export default () => {
               key={c.name}
               hoverable
               style={{
-                width: 'calc(min(100%, 15rem))',
+                width: '100%',
+                maxWidth: '15rem',
                 margin: '1rem',
                 borderRadius: '1rem',
                 overflow: 'hidden',
@@ -86,6 +79,10 @@ export default () => {
                   }}
                 />
               }
+              onClick={() => {
+                dispatch(setChosenDestination(cityName));
+                dispatch(setStep('resultsFinal'));
+              }}
             >
               <Card.Meta
                 title={t('city:' + c.name + '.name')}
@@ -99,7 +96,7 @@ export default () => {
         })}
       </CardsContainer>
 
-      <Navigation />
+      <Navigation noContinue />
     </>
   );
 };

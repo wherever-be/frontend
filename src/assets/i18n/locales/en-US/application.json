@@ -29,6 +29,11 @@
     "resultsCities": {
       "title": "Choose which city you would like to go to.",
       "minTotalPrice": "Total price starting at {{minTotalPrice, currency}}"
+    },
+    "resultsFinal": {
+      "title": "Finally choose your journey and share it with your friends!",
+      "staysHome": "(stays home)",
+      "book": "Book"
     }
   }
 }

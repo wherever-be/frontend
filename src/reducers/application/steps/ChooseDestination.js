@@ -21,7 +21,7 @@ export default () => {
     <>
       <Question>{tLocal('title')}</Question>
 
-      <table style={{ width: 'calc(min(100%, 25rem))' }}>
+      <table style={{ width: '100%', maxWidth: '25rem' }}>
         <tbody>
           <tr>
             <td style={{ padding: '0 1rem 0.5rem 0', width: 'auto', whiteSpace: 'nowrap' }}>

@@ -32,7 +32,7 @@ export default () => {
       {friends.length === 0 ? null : (
         <List
           dataSource={friends}
-          style={{ width: 'calc(min(100%, 25rem))', marginBottom: '1rem' }}
+          style={{ width: '100%', maxWidth: '25rem', marginBottom: '1rem' }}
           renderItem={friend => (
             <List.Item
               actions={[

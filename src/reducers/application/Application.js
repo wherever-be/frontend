@@ -6,7 +6,7 @@ import Content from './Content';
 import BackgroundAttribution from './BackgroundAttribution';
 
 const ApplicationContainer = styled.div`
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
