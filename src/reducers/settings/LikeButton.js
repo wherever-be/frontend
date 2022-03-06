@@ -8,7 +8,7 @@ export default () => {
 
   return (
     <a href="https://github.com/wherever-be" target="_blank" rel="noreferrer">
-      <Tooltip title={t('settings:like.title')}>
+      <Tooltip title={t('settings:like.title')} placement="bottomRight">
         <Button shape="circle" icon={<HeartOutlined />} size="large" style={{ marginLeft: '0.5rem' }} />
       </Tooltip>
     </a>

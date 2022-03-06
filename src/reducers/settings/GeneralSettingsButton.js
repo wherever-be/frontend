@@ -10,7 +10,7 @@ export default () => {
 
   return (
     <>
-      <Tooltip title={tLocal('title')}>
+      <Tooltip title={tLocal('title')} placement="bottom">
         <Button
           shape="circle"
           onClick={() => setModalOpen(true)}
