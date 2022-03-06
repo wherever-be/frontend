@@ -68,11 +68,17 @@ export default () => {
             <Card
               key={c.name}
               hoverable
-              style={{ width: 'calc(min(100%, 15rem))', margin: '1rem' }}
+              style={{
+                width: 'calc(min(100%, 15rem))',
+                margin: '1rem',
+                borderRadius: '1rem',
+                overflow: 'hidden',
+                border: 'none',
+              }}
               cover={
                 <div
                   style={{
-                    width: '15rem',
+                    width: '100%',
                     height: '15rem',
                     backgroundImage: `url(${thumbnail}})`,
                     backgroundSize: 'cover',
