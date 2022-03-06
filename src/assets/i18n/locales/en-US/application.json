@@ -24,7 +24,8 @@
       "labels": {
         "country": "Destination country",
         "city": "Destination city"
-      }
+      },
+      "noResults": "No results"
     },
     "resultsCities": {
       "title": "Choose which city you would like to go to.",

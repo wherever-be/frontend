@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { message } from 'antd';
+import i18n from 'i18next';
 
 export const search = createAsyncThunk('application/searchStatus', async (_, { getState }) => {
   const { destination, durationRange, friends, timeFrame } = getState().application;
@@ -62,7 +63,15 @@ const applicationSlice = createSlice({
     builder.addCase(search.fulfilled, (state, { payload }) => {
       state.search.loading = false;
       state.search.results = payload.searchResults;
-      state.step = 'resultsCities';
+
+      if (state.search.results.length === 0) {
+        message.error(i18n.t('application:steps.chooseDestination.noResults'));
+      } else if ([...new Set(state.search.results.map(r => r.destination))].length === 1) {
+        state.chosenDestination = state.search.results[0].destination;
+        state.step = 'resultsFinal';
+      } else {
+        state.step = 'resultsCities';
+      }
     });
     builder.addCase(search.rejected, (state, action) => {
       state.search.loading = false;
