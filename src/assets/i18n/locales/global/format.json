@@ -1,0 +1,4 @@
+{
+  "currency": "{{amount, currency}}",
+  "datetime": "{{val, datetime}}"
+}
