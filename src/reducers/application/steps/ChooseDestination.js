@@ -38,7 +38,13 @@ export default () => {
               <ChooseCity
                 style={{ width: '100%' }}
                 value={destination.city}
-                onChange={city => dispatch(setDestination({ country: t('city:' + city + '.country'), city }))}
+                onChange={city =>
+                  dispatch(
+                    setDestination(
+                      city ? { country: t('city:' + city + '.country'), city } : { country: destination.country },
+                    ),
+                  )
+                }
               />
             </td>
           </tr>
