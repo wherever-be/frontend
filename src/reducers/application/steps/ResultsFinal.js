@@ -44,71 +44,8 @@ function getJourneyStepProps(t, connection) {
 const ResultItem = ({ id }) => {
   const { t } = useTranslation();
   const tLocal = (k, ...params) => t('application:steps.resultsFinal.' + k, ...params);
-  const result = { ...useSelector(state => state.application.search?.results?.find(r => r.id === id)) };
+  const result = useSelector(state => state.application.search?.results?.find(r => r.id === id));
   if (!result) return null;
-
-  result.journeys = [
-    {
-      friendName: 'Chris',
-      staysHome: true,
-    },
-    {
-      friendName: 'Joshua',
-      staysHome: false,
-      homeToDest: {
-        departure: {
-          date: '2015-12-12T13:52:00.000Z',
-          port: 'ARN',
-        },
-        arrival: {
-          date: '2015-12-12T16:31:00.000Z',
-          port: 'BRU',
-        },
-        price: { amount: 48.2, unit: 'EUR' },
-        bookingLink: 'http://www.ryanair.com/book/coolflights.php',
-      },
-      destToHome: {
-        departure: {
-          date: '2015-12-17T23:11:00.000Z',
-          port: 'BRU',
-        },
-        arrival: {
-          date: '2015-12-18T02:21:00.000Z',
-          port: 'NYO',
-        },
-        price: { amount: 98.1, unit: 'EUR' },
-        bookingLink: 'http://www.wizzair.com/book/otherflights.cgi',
-      },
-    },
-    {
-      friendName: 'Charlotte',
-      staysHome: false,
-      homeToDest: {
-        departure: {
-          date: '2015-12-11T13:52:00.000Z',
-          port: 'CIA',
-        },
-        arrival: {
-          date: '2015-12-11T16:31:00.000Z',
-          port: 'BRU',
-        },
-        price: { amount: 39.23, unit: 'EUR' },
-        bookingLink: 'http://www.ryanair.com/book/coolflights.php',
-      },
-      destToHome: {
-        departure: {
-          date: '2015-12-15T23:11:00.000Z',
-          port: 'BRU',
-        },
-        arrival: {
-          date: '2015-12-16T02:21:00.000Z',
-          port: 'CIA',
-        },
-        price: { amount: 12.23, unit: 'EUR' },
-        bookingLink: 'http://www.wizzair.com/book/otherflights.cgi',
-      },
-    },
-  ];
 
   const firstDeparture = Math.min(
     ...result.journeys.filter(j => j.homeToDest).map(j => +new Date(j.homeToDest.departure.date)),
