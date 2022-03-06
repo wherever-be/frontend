@@ -7,6 +7,13 @@ const path = require('path');
     .data;
   const images = (await axios('https://www.ryanair.com/de/de.farefinder.json')).data;
 
+  const airportsI18n = airports
+    .sort((a, b) => a.code.localeCompare(b.code))
+    .reduce((obj, airport) => {
+      obj[airport.code] = airport.name;
+      return obj;
+    }, {});
+
   const countries = airports
     .sort((a, b) => a.country.code.localeCompare(b.country.code))
     .reduce((obj, airport) => {
@@ -27,6 +34,9 @@ const path = require('path');
     }
   }
 
+  await fs.writeJSON(path.join(__dirname, '../src/assets/i18n/locales/en-US/airport.json'), airportsI18n, {
+    spaces: 2,
+  });
   await fs.writeJSON(path.join(__dirname, '../src/assets/i18n/locales/en-US/country.json'), countries, { spaces: 2 });
   await fs.writeJSON(path.join(__dirname, '../src/assets/i18n/locales/en-US/city.json'), cities, { spaces: 2 });
 })();
