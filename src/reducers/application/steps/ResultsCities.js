@@ -57,22 +57,40 @@ export default () => {
       <Question>{tLocal('title')}</Question>
 
       <CardsContainer>
-        {resultsByCity.cities.map(c => (
-          <Card
-            key={c.name}
-            hoverable
-            style={{ width: 'calc(min(100%, 20rem))', margin: '1rem' }}
-            cover={<img alt={c.name} src="https://fakeimg.pl/300x100/" />}
-          >
-            <Card.Meta
-              title={t('city:' + c.name + '.name')}
-              description={tLocal('minTotalPrice', {
-                minTotalPrice: c.minTotalPrice.amount,
-                formatParams: { minTotalPrice: { currency: c.minTotalPrice.unit } },
-              })}
-            />
-          </Card>
-        ))}
+        {resultsByCity.cities.map(c => {
+          const cityName = c.name;
+          let thumbnail = t('city:' + cityName + '.thumbnail');
+          if (thumbnail === cityName + '.thumbnail')
+            thumbnail =
+              'https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/wk83602924-image-kp6buvvu.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=a04a62924388e0bd1d9ff9300ed90d38';
+
+          return (
+            <Card
+              key={c.name}
+              hoverable
+              style={{ width: 'calc(min(100%, 15rem))', margin: '1rem' }}
+              cover={
+                <div
+                  style={{
+                    width: '15rem',
+                    height: '15rem',
+                    backgroundImage: `url(${thumbnail}})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center center',
+                  }}
+                />
+              }
+            >
+              <Card.Meta
+                title={t('city:' + c.name + '.name')}
+                description={tLocal('minTotalPrice', {
+                  minTotalPrice: c.minTotalPrice.amount,
+                  formatParams: { minTotalPrice: { currency: c.minTotalPrice.unit } },
+                })}
+              />
+            </Card>
+          );
+        })}
       </CardsContainer>
 
       <Navigation />
