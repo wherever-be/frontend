@@ -24,4 +24,5 @@ i18next
 
     nonExplicitSupportedLngs: true,
     skipOnVariables: false,
+    interpolation: { escapeValue: false },
   });
