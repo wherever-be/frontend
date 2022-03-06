@@ -26,7 +26,14 @@ export default () => {
         onCancel={() => setModalOpen(false)}
         cancelButtonProps={{ style: { display: 'none' } }}
       >
-        N/A
+        <Button
+          onClick={() => {
+            localStorage.removeItem('persist:root');
+            window.location.reload();
+          }}
+        >
+          Reset state
+        </Button>
       </Modal>
     </>
   );
