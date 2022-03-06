@@ -7,7 +7,7 @@ export default props => {
   const cities = i18n.getResourceBundle(i18n.language, 'city');
 
   return (
-    <Select {...props}>
+    <Select showSearch allowClear {...props}>
       {Object.entries(cities)
         .sort((a, b) => a[1].name.localeCompare(b[1].name))
         .map(c => (
