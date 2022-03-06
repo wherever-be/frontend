@@ -33,7 +33,8 @@
     "resultsFinal": {
       "title": "Finally choose your journey and share it with your friends!",
       "staysHome": "(stays home)",
-      "book": "Book"
+      "book": "Book",
+      "reset": "Reset and go back to start"
     }
   }
 }

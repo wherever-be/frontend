@@ -7,6 +7,7 @@ import Question from '../../../components/Question';
 import CardsContainer from '../../../components/CardsContainer';
 import Navigation from './Navigation';
 import { tCurrency, tDate } from '../../../utils/utils';
+import { reset } from '../applicationSlice';
 
 function getJourneyStepProps(t, connection) {
   return {
@@ -160,6 +161,7 @@ const ResultItem = ({ id }) => {
 export default () => {
   const { t } = useTranslation();
   const tLocal = (k, ...params) => t('application:steps.resultsFinal.' + k, ...params);
+  const dispatch = useDispatch();
   const results = useSelector(state =>
     state.application.search?.results?.filter(r => r.destination === state.application.chosenDestination),
   );
@@ -174,7 +176,9 @@ export default () => {
         ))}
       </CardsContainer>
 
-      <Navigation />
+      <Navigation>
+        <Button onClick={() => dispatch(reset())}>{tLocal('reset')}</Button>
+      </Navigation>
     </>
   );
 };

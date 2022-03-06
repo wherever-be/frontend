@@ -14,16 +14,24 @@ export const search = createAsyncThunk('application/searchStatus', async (_, { g
   ).json();
 });
 
-const applicationSlice = createSlice({
-  name: 'application',
-  initialState: {
+function getInitialState() {
+  return {
     step: 'chooseTimeFrame',
     timeFrame: undefined,
     durationRange: { min: 3, max: 7 },
     friends: [],
     destination: {},
-  },
+  };
+}
+
+const applicationSlice = createSlice({
+  name: 'application',
+  initialState: getInitialState(),
   reducers: {
+    reset(state) {
+      for (const k of Object.keys(state)) delete state[k];
+      Object.assign(state, getInitialState());
+    },
     setStep(state, { payload: newStep }) {
       state.step = newStep;
     },
@@ -64,6 +72,7 @@ const applicationSlice = createSlice({
 });
 
 export const {
+  reset,
   setStep,
   setTimeFrame,
   setDurationRange,
