@@ -35,7 +35,8 @@
       "title": "Finally choose your journey and share it with your friends!",
       "staysHome": "(stays home)",
       "book": "Book",
-      "reset": "Reset and go back to start"
+      "reset": "Reset and go back to start",
+      "copiedToClipboard": "Copied to clipboard!"
     }
   }
 }

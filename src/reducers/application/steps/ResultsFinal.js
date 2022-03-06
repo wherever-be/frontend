@@ -1,7 +1,8 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
-import { Button, Card, Divider, Steps, Tooltip } from 'antd';
+import { Button, Card, Divider, message, Steps, Tooltip } from 'antd';
+import copy from 'copy-to-clipboard';
 
 import Question from '../../../components/Question';
 import CardsContainer from '../../../components/CardsContainer';
@@ -166,13 +167,33 @@ export default () => {
   const { t } = useTranslation();
   const tLocal = (k, ...params) => t('application:steps.resultsFinal.' + k, ...params);
   const dispatch = useDispatch();
-  const results = useSelector(state =>
-    state.application.search?.results?.filter(r => r.destination === state.application.chosenDestination),
-  );
+  const application = useSelector(state => state.application);
+  const results = application.search?.results?.filter(r => r.destination === application.chosenDestination);
 
   return (
     <>
-      <Question>{tLocal('title')}</Question>
+      <Question style={{ marginBottom: '0.5rem' }}>{tLocal('title')}</Question>
+      <Button
+        type="primary"
+        style={{ marginBottom: '2rem' }}
+        onClick={() => {
+          const data = {
+            timeFrame: application.timeFrame,
+            durationRange: application.durationRange,
+            friends: application.friends,
+            destination: application.destination,
+          };
+
+          const searchParams = new URLSearchParams();
+          searchParams.append('search', JSON.stringify(data));
+          const link = window.location.protocol + '//' + window.location.host + '/?' + searchParams.toString();
+
+          copy(link);
+          message.success(tLocal('copiedToClipboard'));
+        }}
+      >
+        Copy a link to these results
+      </Button>
 
       <CardsContainer style={{ flexDirection: 'column' }}>
         {results.map(r => (
