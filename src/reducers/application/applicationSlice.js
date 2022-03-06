@@ -1,4 +1,18 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { message } from 'antd';
+
+export const search = createAsyncThunk('application/searchStatus', async (_, { getState }) => {
+  const { destination, durationRange, friends, timeFrame } = getState().application;
+  const data = { destination, durationRange, friends, timeFrame };
+
+  return await (
+    await fetch('https://n7axvpsxaa.execute-api.eu-north-1.amazonaws.com/api/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    })
+  ).json();
+});
 
 const applicationSlice = createSlice({
   name: 'application',
@@ -30,13 +44,22 @@ const applicationSlice = createSlice({
       state.destination = payload;
     },
   },
+  extraReducers: builder => {
+    builder.addCase(search.pending, state => {
+      state.search = { loading: true };
+    });
+    builder.addCase(search.fulfilled, (state, { payload }) => {
+      state.search.loading = false;
+      state.search.results = payload.searchResults;
+    });
+    builder.addCase(search.rejected, (state, action) => {
+      state.search.loading = false;
+      message.error(action.error.message);
+    });
+  },
 });
 
 export const { setStep, setTimeFrame, setDurationRange, addFriend, removeFriend, setDestination } =
   applicationSlice.actions;
 
 export default applicationSlice.reducer;
-
-export const search = () => async (dispatch, getState) => {
-  console.log(getState());
-};

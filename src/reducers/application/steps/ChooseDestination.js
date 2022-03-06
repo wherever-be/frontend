@@ -15,6 +15,7 @@ export default () => {
   const tLocal = (k, ...params) => t('application:steps.chooseDestination.' + k, ...params);
   const dispatch = useDispatch();
   const destination = useSelector(state => state.application.destination);
+  const searchState = useSelector(state => state.application.search);
 
   return (
     <>
@@ -54,7 +55,12 @@ export default () => {
       </table>
 
       <Navigation>
-        <Button type="primary" icon={<SearchOutlined />} onClick={() => dispatch(search())}>
+        <Button
+          type="primary"
+          icon={<SearchOutlined />}
+          onClick={() => dispatch(search())}
+          loading={searchState?.loading}
+        >
           Search
         </Button>
       </Navigation>
