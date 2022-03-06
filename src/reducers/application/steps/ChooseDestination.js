@@ -1,12 +1,14 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
+import { Button } from 'antd';
+import { SearchOutlined } from '@ant-design/icons';
 
 import Question from '../../../components/Question';
 import ChooseCountry from '../../../components/ChooseCountry';
 import ChooseCity from '../../../components/ChooseCity';
 import Navigation from './Navigation';
-import { setDestination } from '../applicationSlice';
+import { setDestination, search } from '../applicationSlice';
 
 export default () => {
   const { t } = useTranslation();
@@ -51,7 +53,11 @@ export default () => {
         </tbody>
       </table>
 
-      <Navigation />
+      <Navigation>
+        <Button type="primary" icon={<SearchOutlined />} onClick={() => dispatch(search())}>
+          Search
+        </Button>
+      </Navigation>
     </>
   );
 };

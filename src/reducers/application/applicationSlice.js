@@ -36,3 +36,7 @@ export const { setStep, setTimeFrame, setDurationRange, addFriend, removeFriend,
   applicationSlice.actions;
 
 export default applicationSlice.reducer;
+
+export const search = () => async (dispatch, getState) => {
+  console.log(getState());
+};
