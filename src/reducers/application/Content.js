@@ -13,7 +13,7 @@ const Claim = styled.p`
   text-align: center;
   font-weight: 900;
   font-size: 10rem;
-  margin: 5rem 0 0 0;
+  margin: 3rem 0 0 0;
   font-family: Playball, Inter, sans-serif;
   color: #010203;
   transition: font-size 0.2s, margin-bottom 0.2s;
