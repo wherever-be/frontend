@@ -8,6 +8,7 @@ export default createGlobalStyle`
     background-size: cover;
     background-position: right top;
     background-attachment: fixed;
+    overflow-x: hidden;
   }
 
   *, *:before, *:after {

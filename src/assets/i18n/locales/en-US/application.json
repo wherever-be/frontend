@@ -25,6 +25,10 @@
         "country": "Destination country",
         "city": "Destination city"
       }
+    },
+    "resultsCities": {
+      "title": "Choose which city you would like to go to.",
+      "minTotalPrice": "Total price starting at {{minTotalPrice, currency}}"
     }
   }
 }

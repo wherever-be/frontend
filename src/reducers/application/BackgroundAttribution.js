@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const AttributionText = styled.div`
-  position: absolute;
+  position: fixed;
   bottom: 1rem;
   right: 1rem;
   font-size: 0.7rem;

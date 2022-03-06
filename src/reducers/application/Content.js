@@ -7,6 +7,7 @@ import ChooseTimeFrame from './steps/ChooseTimeFrame';
 import ChooseDurationRange from './steps/ChooseDurationRange';
 import ChooseOriginCities from './steps/ChooseOriginCities';
 import ChooseDestination from './steps/ChooseDestination';
+import ResultsCities from './steps/ResultsCities';
 
 const Claim = styled.p`
   text-align: center;
@@ -53,6 +54,7 @@ export default () => {
       {step === 'chooseDurationRange' ? <ChooseDurationRange /> : null}
       {step === 'chooseOriginCities' ? <ChooseOriginCities /> : null}
       {step === 'chooseDestination' ? <ChooseDestination /> : null}
+      {step === 'resultsCities' ? <ResultsCities /> : null}
     </>
   );
 };

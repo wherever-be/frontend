@@ -14,5 +14,8 @@ export function getSteps(state) {
     {
       name: 'chooseDestination',
     },
+    {
+      name: 'resultsCities',
+    },
   ];
 }

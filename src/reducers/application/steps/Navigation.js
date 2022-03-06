@@ -22,7 +22,7 @@ export default ({ children }) => {
           {t('common:dialog.buttons.back')}
         </Button>
       )}
-      {currentStepIdx === stepList.length - 1 ? null : (
+      {currentStepIdx === stepList.length - 1 || children ? null : (
         <Button
           type="primary"
           onClick={() => dispatch(setStep(stepList[currentStepIdx + 1].name))}

@@ -51,6 +51,7 @@ const applicationSlice = createSlice({
     builder.addCase(search.fulfilled, (state, { payload }) => {
       state.search.loading = false;
       state.search.results = payload.searchResults;
+      state.step = 'resultsCities';
     });
     builder.addCase(search.rejected, (state, action) => {
       state.search.loading = false;

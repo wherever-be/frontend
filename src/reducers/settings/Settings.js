@@ -5,7 +5,7 @@ import GeneralSettingsButton from './GeneralSettingsButton';
 import LikeButton from './LikeButton';
 
 const ButtonContainer = styled.div`
-  position: absolute;
+  position: fixed;
   top: 1rem;
   right: 1rem;
 `;
