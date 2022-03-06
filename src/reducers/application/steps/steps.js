@@ -13,6 +13,7 @@ export function getSteps(state) {
     },
     {
       name: 'chooseDestination',
+      nextStepDisabled: !state.application.destination?.country,
     },
   ];
 

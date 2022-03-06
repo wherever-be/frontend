@@ -60,6 +60,7 @@ export default () => {
           icon={<SearchOutlined />}
           onClick={() => dispatch(search())}
           loading={searchState?.loading}
+          disabled={!destination?.country}
         >
           Search
         </Button>

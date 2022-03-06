@@ -20,7 +20,7 @@
       }
     },
     "chooseDestination": {
-      "title": "If you like, you can choose a destination country or city.",
+      "title": "Choose a destination country and optionally a destination city.",
       "labels": {
         "country": "Destination country",
         "city": "Destination city"
