@@ -55,6 +55,9 @@ const applicationSlice = createSlice({
     setChosenDestination(state, { payload }) {
       state.chosenDestination = payload;
     },
+    setProps(state, { payload }) {
+      Object.assign(state, payload);
+    },
   },
   extraReducers: builder => {
     builder.addCase(search.pending, state => {
@@ -89,6 +92,7 @@ export const {
   removeFriend,
   setDestination,
   setChosenDestination,
+  setProps,
 } = applicationSlice.actions;
 
 export default applicationSlice.reducer;

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Settings from '../settings/Settings';
 import Content from './Content';
 import BackgroundAttribution from './BackgroundAttribution';
+import SearchViaLinkHandler from './SearchViaLinkHandler';
 
 const ApplicationContainer = styled.div`
   padding: 6rem 2rem;
@@ -18,6 +19,7 @@ export default () => {
       <BackgroundAttribution />
       <Settings />
       <Content />
+      <SearchViaLinkHandler />
     </ApplicationContainer>
   );
 };
