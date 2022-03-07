@@ -1,7 +1,7 @@
 export function tCurrency(t, amount) {
   return t('format:currency', {
     amount: amount.amount,
-    formatParams: { amount: { currency: amount.unit } },
+    formatParams: { amount: { currency: amount.currency ?? amount.unit } },
   });
 }
 
