@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import GeneralSettingsButton from './GeneralSettingsButton';
 import LikeButton from './LikeButton';
 
 const ButtonContainer = styled.div`
@@ -13,7 +12,6 @@ const ButtonContainer = styled.div`
 export default () => {
   return (
     <ButtonContainer>
-      <GeneralSettingsButton />
       <LikeButton />
     </ButtonContainer>
   );
