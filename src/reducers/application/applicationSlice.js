@@ -7,7 +7,7 @@ export const search = createAsyncThunk('application/searchStatus', async (_, { g
   const data = { destination, durationRange, friends, timeFrame };
 
   return await (
-    await fetch('https://n7axvpsxaa.execute-api.eu-north-1.amazonaws.com/api/', {
+    await fetch('http://13.53.121.104/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
