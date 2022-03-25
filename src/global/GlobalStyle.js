@@ -1,14 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 
-import background from '../assets/img/background.webp';
-
 export default createGlobalStyle`
   body {
-    background-image: url(${background});
-    background-size: cover;
-    background-position: right top;
-    background-attachment: fixed;
     overflow-x: hidden;
+    background-color: #f9fafc;
   }
 
   *, *:before, *:after {

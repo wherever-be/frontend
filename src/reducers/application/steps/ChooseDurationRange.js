@@ -20,10 +20,7 @@ export default () => {
         <Slider
           range
           value={[appState.durationRange.min, appState.durationRange.max]}
-          onChange={newRange => {
-            console.log(newRange);
-            dispatch(setDurationRange(newRange));
-          }}
+          onChange={newRange => dispatch(setDurationRange(newRange))}
           min={1}
           max={20}
           marks={{
