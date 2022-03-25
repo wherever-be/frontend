@@ -7,7 +7,7 @@ export const search = createAsyncThunk('application/searchStatus', async (_, { g
   const data = { destination, durationRange, friends, timeFrame };
 
   return await (
-    await fetch('https://api.wherever.be/', {
+    await fetch('https://api.wherever.be:42069/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
