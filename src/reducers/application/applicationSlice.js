@@ -28,12 +28,12 @@ export const search = createAsyncThunk('application/searchStatus', async (_, { d
 });
 
 function getInitialState() {
-  return {
+  /*return {
     timeFrame: { start: '2022-04-18', end: '2022-07-18' },
     durationRange: { min: 3, max: 7 },
     friends: [{ id: uuidv4(), name: 'Me', city: 'STOCKHOLM' }],
     destination: { country: 'de' },
-  };
+  };*/
 
   return {
     timeFrame: undefined,
