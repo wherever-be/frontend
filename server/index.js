@@ -4,6 +4,10 @@ const path = require('path');
 const https = require('https');
 const express = require('express');
 
+/**
+ * Actual HTTPS app
+ */
+
 const app = express();
 
 // Certificate
@@ -25,3 +29,15 @@ const httpsServer = https.createServer(credentials, app);
 httpsServer.listen(443, () => {
   console.log('HTTPS Server running on port 443');
 });
+
+/**
+ * HTTP app which forwards to the HTTPS version
+ */
+
+const httpApp = express();
+
+httpApp.get('*', function (req, res) {
+  res.redirect('https://' + req.headers.host + req.url);
+});
+
+httpApp.listen(80);
