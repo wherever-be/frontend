@@ -1,31 +1,40 @@
 {
   "claim": "wherever.be",
+  "search": "Search",
+  "noResults": "No results",
   "steps": {
     "chooseTimeFrame": {
-      "title": "In which time frame do you want to meet?"
+      "title": "When?",
+      "placeholder": {
+        "start": "Earliest possible",
+        "end": "Latest possible"
+      }
     },
     "chooseDurationRange": {
-      "title": "How many days should each person's trip last?",
+      "title": "For how long?",
       "numDays": "{{days}}\u00a0days"
     },
     "chooseOriginCities": {
-      "title": "For whom do you want to plan the journey?",
-      "friend": "{{name}} from {{city}}",
-      "addFriend": {
-        "title": "Add friend",
-        "labels": {
-          "name": "Name",
-          "city": "City"
+      "title": "Who's going?",
+      "from": "from",
+      "placeholder": {
+        "first": {
+          "name": "Your name",
+          "city": "Your city"
+        },
+        "other": {
+          "name": "Friend's name",
+          "city": "Friend's city"
         }
-      }
+      },
+      "add": "Add friend"
     },
     "chooseDestination": {
-      "title": "Choose a destination country and optionally a destination city.",
-      "labels": {
-        "country": "Destination country",
-        "city": "Destination city"
-      },
-      "noResults": "No results"
+      "title": "Where to?",
+      "placeholder": {
+        "global": "Anywhere",
+        "country": "Anywhere in {{country}}"
+      }
     },
     "resultsCities": {
       "title": "Choose which city you would like to go to.",

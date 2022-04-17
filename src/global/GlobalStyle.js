@@ -34,4 +34,8 @@ export default createGlobalStyle`
     background-color: rgba(45, 70, 104, 0.4);
     cursor: pointer;
   }
+
+  .ant-slider-mark-text {
+    font-size: 0.7rem;
+  }
 `;

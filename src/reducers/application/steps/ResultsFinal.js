@@ -1,14 +1,12 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { Button, Card, Divider, message, Steps, Tooltip } from 'antd';
 import copy from 'copy-to-clipboard';
 
 import Question from '../../../components/Question';
 import CardsContainer from '../../../components/CardsContainer';
-import Navigation from './Navigation';
 import { tCurrency, tDate, tTime } from '../../../utils/utils';
-import { reset } from '../applicationSlice';
 
 function getJourneyStepProps(t, connection) {
   return {
@@ -103,9 +101,10 @@ const ResultItem = ({ id }) => {
 export default () => {
   const { t } = useTranslation();
   const tLocal = (k, ...params) => t('application:steps.resultsFinal.' + k, ...params);
-  const dispatch = useDispatch();
   const application = useSelector(state => state.application);
-  const results = application.search?.results?.filter(r => r.destination === application.chosenDestination);
+
+  let results = application.search?.results ?? [];
+  if (application.chosenDestination) results = results.filter(r => r.destination === application.chosenDestination);
 
   return (
     <>
@@ -137,10 +136,6 @@ export default () => {
           <ResultItem key={r.id} id={r.id} />
         ))}
       </CardsContainer>
-
-      <Navigation>
-        <Button onClick={() => dispatch(reset())}>{tLocal('reset')}</Button>
-      </Navigation>
     </>
   );
 };

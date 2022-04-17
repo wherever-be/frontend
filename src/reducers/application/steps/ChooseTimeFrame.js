@@ -5,8 +5,6 @@ import { DatePicker } from 'antd';
 import moment from 'moment';
 
 import { setTimeFrame } from '../applicationSlice';
-import Question from '../../../components/Question';
-import Navigation from './Navigation';
 
 export default () => {
   const { t } = useTranslation();
@@ -15,17 +13,18 @@ export default () => {
   const timeFrame = appState.timeFrame ? [moment(appState.timeFrame.start), moment(appState.timeFrame.end)] : null;
 
   return (
-    <>
-      <Question>{t('application:steps.chooseTimeFrame.title')}</Question>
-
-      <DatePicker.RangePicker
-        value={timeFrame}
-        onChange={(_, newRange) => {
-          dispatch(setTimeFrame(newRange));
-        }}
-      />
-
-      <Navigation />
-    </>
+    <DatePicker.RangePicker
+      value={timeFrame}
+      onChange={(_, newRange) => {
+        dispatch(setTimeFrame(newRange));
+      }}
+      placeholder={[
+        t('application:steps.chooseTimeFrame.placeholder.start'),
+        t('application:steps.chooseTimeFrame.placeholder.end'),
+      ]}
+      status={
+        appState.highlightInputIssues && (!appState.timeFrame?.start || !appState.timeFrame?.end) ? 'error' : undefined
+      }
+    />
   );
 };

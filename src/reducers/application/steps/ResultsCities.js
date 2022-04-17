@@ -3,10 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { Card } from 'antd';
 
-import Question from '../../../components/Question';
-import CardsContainer from '../../../components/CardsContainer';
-import Navigation from './Navigation';
-import { setChosenDestination, setStep } from '../applicationSlice';
+import { setChosenDestination } from '../applicationSlice';
 
 function sumAll(arr) {
   return arr.reduce((sum, x) => sum + x, 0);
@@ -45,58 +42,51 @@ export default () => {
   if (!resultsByCity) return null;
 
   return (
-    <>
-      <Question>{tLocal('title')}</Question>
+    <div style={{ display: 'flex', flexWrap: 'wrap', maxWidth: '60rem' }}>
+      {resultsByCity.cities.map(c => {
+        const cityName = c.name;
+        let thumbnail = t('city:' + cityName + '.thumbnail');
+        if (thumbnail === cityName + '.thumbnail')
+          thumbnail =
+            'https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/wk83602924-image-kp6buvvu.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=a04a62924388e0bd1d9ff9300ed90d38';
 
-      <CardsContainer style={{ flexWrap: 'wrap' }}>
-        {resultsByCity.cities.map(c => {
-          const cityName = c.name;
-          let thumbnail = t('city:' + cityName + '.thumbnail');
-          if (thumbnail === cityName + '.thumbnail')
-            thumbnail =
-              'https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/wk83602924-image-kp6buvvu.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=a04a62924388e0bd1d9ff9300ed90d38';
-
-          return (
-            <Card
-              key={c.name}
-              hoverable
-              style={{
-                width: '100%',
-                maxWidth: '15rem',
-                margin: '1rem',
-                borderRadius: '1rem',
-                overflow: 'hidden',
-                border: 'none',
-              }}
-              cover={
-                <div
-                  style={{
-                    width: '100%',
-                    height: '15rem',
-                    backgroundImage: `url(${thumbnail}})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center center',
-                  }}
-                />
-              }
-              onClick={() => {
-                dispatch(setChosenDestination(cityName));
-                dispatch(setStep('resultsFinal'));
-              }}
-            >
-              <Card.Meta
-                title={t('city:' + c.name + '.name')}
-                description={tLocal('minTotalPrice', {
-                  minTotalPrice: c.minTotalPrice.amount,
-                  formatParams: { minTotalPrice: { currency: c.minTotalPrice.unit } },
-                })}
+        return (
+          <Card
+            key={c.name}
+            hoverable
+            style={{
+              width: '100%',
+              maxWidth: '15rem',
+              margin: '1rem',
+              borderRadius: '1rem',
+              overflow: 'hidden',
+              border: 'none',
+            }}
+            cover={
+              <div
+                style={{
+                  width: '100%',
+                  height: '15rem',
+                  backgroundImage: `url(${thumbnail}})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center center',
+                }}
               />
-            </Card>
-          );
-        })}
-      </CardsContainer>
-
-      <Navigation noContinue />
-    </>
+            }
+            onClick={() => {
+              dispatch(setChosenDestination(cityName));
+            }}
+          >
+            <Card.Meta
+              title={t('city:' + c.name + '.name')}
+              description={tLocal('minTotalPrice', {
+                minTotalPrice: c.minTotalPrice.amount,
+                formatParams: { minTotalPrice: { currency: c.minTotalPrice.unit } },
+              })}
+            />
+          </Card>
+        );
+      })}
+    </div>
   );
 };
