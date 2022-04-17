@@ -30,7 +30,7 @@
       "add": "Add friend"
     },
     "chooseDestination": {
-      "title": "Where to?",
+      "title": "Where to? (optional)",
       "placeholder": {
         "global": "Anywhere",
         "country": "Anywhere in {{country}}"
