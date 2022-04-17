@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, '../build'), { maxAge: 365 * 24 * 60
 const httpsServer = https.createServer(credentials, app);
 
 httpsServer.listen(443, () => {
-  console.log('HTTPS Server running on port 443');
+  console.log('HTTPS server running on port 443');
 });
 
 /**
@@ -40,4 +40,6 @@ httpApp.get('*', function (req, res) {
   res.redirect('https://' + req.headers.host + req.url);
 });
 
-httpApp.listen(80);
+httpApp.listen(80, () => {
+  console.log('HTTP server running on port 80');
+});
